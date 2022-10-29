@@ -14,6 +14,7 @@ body{
   justify-content: center;
   align-items: center;
 }
+
 .cardWeather{
   width: 40vw;
   height: 60vh;
@@ -22,16 +23,36 @@ body{
   flex-direction: column;
   align-items: center;
   border-radius: 20px;
-  
 }
+@media screen and (max-width: 1000px) {
+  .cardWeather{
+    width: 80vw;
+    height: 85vh;
+    
+  }
+}
+
+
 .location{
   width: 40vw;
   padding: 3vh 0;
   text-align: center;
   border-bottom: 2px solid cadetblue;
 }
+@media screen and (max-width: 1000px){
+  .location{
+    width: 80vw;
+    border: none;
+    padding-bottom: 0;
+  }
+}
 .weather{
   display: flex;
+}
+@media screen and (max-width: 1000px){
+  .weather{
+    display: block;
+  }
 }
 .weather1{
   width: 20vw;
@@ -44,11 +65,25 @@ body{
   border-right: 2px solid cadetblue;
   
 }
+@media screen and (max-width: 1000px){
+  .weather1{
+    border: none;
+    height: 25vh;
+  }
+}
 .weather1 img{
   margin: 5vh;
   width: 5vw;
   background-color: #fd0000;
   border-radius: 50%;
+}
+@media screen and (max-width: 1000px){
+  .weather1 img{
+    margin: 0;
+    width: 10vw;
+    background-color: #fd0000;
+    border-radius: 50%;
+  }
 }
 .weather2{
   width: 20vw;
@@ -59,6 +94,17 @@ body{
   align-items: center;
   gap: 3vh;
 }
+@media screen and (max-width: 1000px){
+  .weather2{
+    width: 20vw;
+    height: 30vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 1vh;
+  }
+}
 .temp-max-min{
   display: flex;
   text-align: center;
@@ -66,6 +112,12 @@ body{
 .button{
   margin: 3vh;
 
+}
+@media screen and (max-width: 1000px){
+  .button{
+    margin: 7vh;
+  
+  }
 }
 .button button{
   padding: 2vh;
