@@ -1,0 +1,87 @@
+*,*:hover{
+  margin: 0;
+  padding: 0;
+}
+body{
+  background-image: url('https://images8.alphacoders.com/714/714894.jpg');
+  background-position: bottom center;
+  font-family: 'EB Garamond', serif;
+}
+.App{
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cardWeather{
+  width: 40vw;
+  height: 55vh;
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  border-radius: 20px;
+  
+}
+.location{
+  width: 40vw;
+  padding: 3vh 0;
+  text-align: center;
+  border-bottom: 2px solid cadetblue;
+}
+.weather{
+  display: flex;
+}
+.weather1{
+  width: 20vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  border-right: 2px solid cadetblue;
+  
+}
+.weather1 img{
+  margin: 5vh;
+  width: 5vw;
+  background-color: #fd0000;
+  border-radius: 50%;
+}
+.weather2{
+  width: 20vw;
+  height: 30vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 3vh;
+}
+.temp-max-min{
+  display: flex;
+  text-align: center;
+}
+.button{
+  margin: 3vh;
+
+}
+.button button{
+  padding: 2vh;
+  border: none;
+  border-radius: 20px;
+  background-color: blueviolet;
+  color: white;
+}
+.button button:active{
+  background-color:white;
+  color: blueviolet;
+  border: 2px solid blueviolet;
+}
+b{
+  color: crimson;
+}
+p{
+  font-size: 20px;
+}
