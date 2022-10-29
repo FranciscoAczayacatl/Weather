@@ -16,7 +16,7 @@ body{
 }
 .cardWeather{
   width: 40vw;
-  height: 55vh;
+  height: 60vh;
   background-color: white;
   display: flex;
   flex-direction: column;
