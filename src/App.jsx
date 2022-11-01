@@ -1,4 +1,3 @@
-
 import axios from 'axios';
 import { useEffect, useState } from 'react'
 import './App.css'
@@ -13,7 +12,7 @@ function App() {
     const succes = pos => {
     const lat = pos.coords.latitude;
     const lon = pos.coords.longitude;
-    axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0c6fc1e3b9e1a46182bd58ce42635c6b`)
+    axios.get(`https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&appid=0c6fc1e3b9e1a46182bd58ce42635c6b&units=imperial`)
     .then(res => setweater(res.data));
     }
 
@@ -36,8 +35,8 @@ function App() {
           <div className='weather1'>
             <img src={`http://openweathermap.org/img/wn/${weather.weather?.[0].icon}.png`} alt={weather.weather?.[0].description} />
             <p><b>Temperature: </b>
-            {celcius?(Math.round(weather.main?.temp-273.15) ):(Math.round(weather.main?.temp))} {' '}
-            {celcius?'°C':'°K'}
+            {celcius?(Math.round((weather.main?.temp-32)/1.8000) ):(Math.round(weather.main?.temp))} {' '}
+            {celcius?'°C':'°F'}
              </p>
           </div>
           <div className='weather2'>
@@ -46,18 +45,18 @@ function App() {
             <p><b>Visibility: </b>{weather.visibility/1000}km</p>
             <div className='temp-max-min'>
               <p><b>Temperature MIN:</b>{' '}
-              {celcius ? (Math.round(weather.main?.temp_min-273.15)) : (Math.round(weather.main?.temp_min)) } {' '}
-              {celcius ? '°C' : '°K'}
+              {celcius ? (Math.round((weather.main?.temp_min-32)/1.8000)) : (Math.round(weather.main?.temp_min)) } {' '}
+              {celcius ? '°C' : '°F'}
               </p>
               <p><b>Temperature MAX:</b>{' '}
-              {celcius ? (Math.round(weather.main?.temp_max-273.15)) : (Math.round(weather.main?.temp_max))} {' '}
-              {celcius ? '°C' : '°K'}
+              {celcius ? (Math.round((weather.main?.temp_max-32)/1.8000)) : (Math.round(weather.main?.temp_max))} {' '}
+              {celcius ? '°C' : '°F'}
               </p>
             </div>
           </div>
         </div>
         <div className='button'>
-          <button onClick={getCelcius}>{celcius ? 'Change Kelvin' : 'Change Celcius'}</button>
+          <button onClick={getCelcius}>{celcius ? 'Change Fahrenheit' : 'Change Celcius'}</button>
         </div>
       </div>
     </div>
@@ -65,3 +64,4 @@ function App() {
 }
 
 export default App
+
